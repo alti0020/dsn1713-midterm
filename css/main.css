@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Sarala:wght@400;700&display=swap');
+
+/* Set custom variables here */
+:root {
+  --bs-body-bg: #F6F3ED;
+  --bg-primary: #2e483a;
+  --navbar-font-color: #A1ACA6;
+  --bs-light: #f6f3ed;
+  /* --custom-variables: #ffffff; */
+}
+/*^^This is just the layout*/
+
+.navbar {
+  background-color: var(--bg-primary);
+}
+
+.navbar-brand {
+  color: var(--bs-light);
+  font-size: small;
+}
+
+.navbar-brand img {
+  width: 20px;
+	height: auto;
+}
+
+.navbar-toggler {
+  border-color: var(--bs-light);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  /* I Had to ask chat gpt what the code to make the white part of the toggler button^^ */
+}
+
+.navbar-nav .nav-link {
+  color: var(--navbar-font-color);
+}
+
+.nav-link.active,
+.nav-link:hover {
+	color:var(--bs-light);
+}
+
+body {
+  font-family: "Sarala", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: "Merriweather", serif;
+}
+
+#hero {
+  height: 800px;
+  background-color: var(--bs-body-bg);
+  background-image: url(../images/hero-bg-img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#hero h1 {
+  font-size: 1.953rem;
+  text-align: center;
+  padding-top: 2.5rem;
+  max-width: 750px; /* Sets the desired maximum width */
+  word-wrap: break-word; /* Ensures words will break if necessary */
+  margin: 0 auto; /* Centers the h1 within its container */
+}
+
+.btn {
+  background-color: var(--bg-primary);
+  color: var(--bs-light);
+}
+
+.btn:hover {
+  background-color: var(--bs-light);
+  color: var(--bg-primary);
+}
+
+
+#hero p {
+  font-size: 1rem;
+  text-align: center;
+  padding-top: 0.5rem;
+  max-width: 700px; /* Sets the desired maximum width */
+  word-wrap: break-word; /* Ensures words will break if necessary */
+  margin: 0 auto; /* Centers the h1 within its container */
+  margin-bottom: 1rem;
+}
+
+#hero .d-flex {
+  height: 800px;
+}
+
+#cta {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/cta-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#cta .d-flex {
+  height: 400px;
+}
+
+section:not(#hero):not(#cta){
+  padding: 60px 0;
+}
+
+@media(min-width: 993px){
+  section:not(#hero):not(#cta){
+    padding: 100px 0;
+  }
+}
